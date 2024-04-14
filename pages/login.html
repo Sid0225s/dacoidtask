@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>taskbysid</title>
+  </head>
+
+  <body class="bg-white p-4 h-[100vh]">
+    <div class="max-w-md mx-auto mt-8 px-4">
+      <h2 class="text-3xl font-semibold mb-8 mt-5">Welcome Back</h2>
+      <form>
+        <input
+          type="email"
+          id="email"
+          oninput="checkForm()"
+          placeholder="Email"
+          class="w-full placeholder-border mb-4 bg-gray-100 p-4 rounded-lg"
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          oninput="checkForm()"
+          class="w-full placeholder-border mb-4 bg-gray-100 p-4 rounded-lg"
+        />
+        <label class="flex items-center mb-4">
+          <span class="ml-2 text-gray-400 text-sm underline"
+            >Forgot your password?
+          </span>
+        </label>
+      </form>
+      <div id="notification" class="text-red-500 mb-4 text-center">
+        Please fill in all fields.
+      </div>
+      <div>
+        <div class="flex flex-col mt-20 items-center">
+          <button
+            id="loginBtn"
+            type="button"
+            onclick="login()"
+            class="bg-[#75a0e6] text-xl text-white py-4 px-4 rounded-lg hover:bg-blue-600 mb-8 w-[80vw]"
+          >
+            Login
+          </button>
+          <div class="mb-4 w-[80vw]">
+            <div class="flex items-center justify-between mb-6">
+              <div class="border-t border-gray-600 flex-grow"></div>
+              <div class="mx-4 text-gray-700 text-xl">Or</div>
+              <div class="border-t border-gray-600 flex-grow"></div>
+            </div>
+
+            <div class="flex space-x-2 justify-center">
+              <button
+                type="button"
+                class="bg-white border flex justify-center py-4 px-4 rounded w-14"
+              >
+                <img src="../media/flat-color-icons_google.png" alt="g" />
+              </button>
+              <button
+                type="button"
+                class="bg-white flex justify-center border py-4 px-4 rounded w-14"
+              >
+                <img src="../media/Vector.png" alt="f" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 text-center">
+        Don’t have an account yet?
+        <a href="./SignUp.html" class="text-blue-500 underline"
+          >Create an account</a
+        >
+      </p>
+    </div>
+    <script>
+      function checkForm() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const loginBtn = document.getElementById("loginBtn");
+        const notification = document.getElementById("notification");
+        if (email && password) {
+          notification.classList.add("hidden");
+        } else {
+          notification.classList.remove("hidden");
+        }
+      }
+
+      function login() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (email && password) {
+          // Redirect to a new page
+          window.location.href = "./goal.html";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sitebysid</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* tailwind is not working properly for this thats why i use this */
+      .chart {
+        height: 200px; /* Set the height of the chart */
+        display: grid;
+        grid-template-columns: repeat(
+          46,
+          1fr
+        ); /* Create 13 columns for the bars */
+        gap: 4px; /* Add some gap between the bars */
+        transform: scaleY(-1); /* Flip the chart vertically */
+      }
+      .bar {
+        background-color: #7b91ff; /* Set the color of the bars */
+        border-radius: 4px; /* Add some border radius for rounded corners */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./goal.html">
+        <img
+          src="../media/chevron-left.png"
+          class="absolute left-6 top-8"
+          alt=" gg"
+      /></a>
+    </div>
+    <h2 class="text-3xl font-semibold mb-8 text-center mt-5 mx-auto">
+      <!-- Added mx-auto for centering -->
+      Workout Tracker
+    </h2>
+    <div class="chart bg-gray-100 mx-auto">
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 0%"></div>
+      <div class="bar" style="height: 90%"></div>
+      <div class="bar" style="height: 30%"></div>
+      <div class="bar" style="height: 50%"></div>
+      <div class="bar" style="height: 40%"></div>
+      <div class="bar" style="height: 60%"></div>
+      <div class="bar" style="height: 20%"></div>
+      <div class="bar" style="height: 10%"></div>
+      <div class="bar" style="height: 5%"></div>
+      <div class="bar" style="height: 15%"></div>
+      <div class="bar" style="height: 35%"></div>
+      <div class="bar" style="height: 30%"></div>
+      <div class="bar" style="height: 20%"></div>
+      <div class="bar" style="height: 40%"></div>
+      <div class="bar" style="height: 15%"></div>
+      <div class="bar" style="height: 3%"></div>
+      <div class="bar" style="height: 4%"></div>
+      <div class="bar" style="height: 20%"></div>
+      <div class="bar" style="height: 30%"></div>
+      <div class="bar" style="height: 70%"></div>
+      <div class="bar" style="height: 20%"></div>
+      <div class="bar" style="height: 40%"></div>
+      <div class="bar" style="height: 20%"></div>
+      <div class="bar" style="height: 50%"></div>
+      <div class="bar" style="height: 20%"></div>
+      <div class="bar" style="height: 30%"></div>
+    </div>
+    <div
+      class="time-labels mx-auto grid grid-cols-4 gap-4 text-center text-gray-500 text-sm"
+    >
+      <div>6 AM</div>
+      <div>12 PM</div>
+      <div>6 PM</div>
+      <div>12 AM</div>
+    </div>
+    <div
+      class="flex p-4 items-center bg-gradient-to-r from-blue-100 to-white m-5 rounded-lg"
+    >
+      <img src="../media//alert-triangle.png" alt="ssa" class="w-8 h-8" />
+      <p class="text-[1.2rem] font-semibold ml-4">
+        You've burned fewer calories than <br />
+        yesterday. Time to get moving!
+      </p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+        <h3 class="text-xl font-semibold">Upcoming Workout</h3>
+        <a href="./schedule.html" class="text-gray-500 hover:underline"
+          >See More</a
+        >
+      </div>
+      <div
+        class="bg-white py-4 px-6 flex items-center rounded-lg m-5 shadow-lg justify-between"
+      >
+        <div class="flex items-center">
+          <img
+            src="../media/Ellipse 53.png"
+            alt="Small Image"
+            class="h-16 w-16 object-cover rounded-full mr-2"
+          />
+          <div>
+            <p class="text-lg font-semibold">Upcoming Workout</p>
+            <p class="text-sm">Today 3:00 PM</p>
+          </div>
+        </div>
+        <label
+          for="toggle1"
+          class="relative inline-block w-12 h-6 bg-blue-400 rounded-full cursor-pointer"
+        >
+          <input id="toggle1" type="checkbox" class="sr-only" />
+          <div
+            id="button1"
+            class="absolute left-0 w-6 h-6 bg-white rounded-full shadow-md transform translate-x-0 transition-transform duration-300"
+          ></div>
+        </label>
+      </div>
+      <div
+        class="bg-white py-4 px-6 flex items-center rounded-lg m-5 shadow-lg justify-between"
+      >
+        <div class="flex items-center">
+          <img
+            src="../media/Ellipse 54.png"
+            alt="Small Image"
+            class="h-16 w-16 object-cover rounded-full mr-2"
+          />
+          <div>
+            <p class="text-lg font-semibold">Upper Body Workout</p>
+            <p class="text-sm">4 feb, 3:30 PM</p>
+          </div>
+        </div>
+        <label
+          for="toggle2"
+          class="relative inline-block w-12 h-6 bg-blue-400 rounded-full cursor-pointer"
+        >
+          <input id="toggle2" type="checkbox" class="sr-only" />
+          <div
+            id="button2"
+            class="absolute left-0 w-6 h-6 bg-white rounded-full shadow-md transform translate-x-0 transition-transform duration-300"
+          ></div>
+        </label>
+      </div>
+    </div>
+    <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+      <h3 class="text-xl font-semibold">What Do You Want to Train</h3>
+    </div>
+    <div class="m-4 mb-16 bg-blue-300 shadow-md rounded-lg overflow-hidden">
+      <div class="flex justify-between items-center p-4">
+        <div>
+          <h3 class="text-lg font-semibold">Full Body Workout</h3>
+          <div class="text-sm text-black">Chest</div>
+          <div class="text-sm text-black">Arms</div>
+        </div>
+        <img
+          src="../media/Ellipse 55.png"
+          alt="Image"
+          class="w-24 h-24 object-cover"
+        />
+      </div>
+    </div>
+    <div
+      class="fixed bottom-0 left-0 right-0 z-50 flex f justify-around items-center bg-white h-28"
+    >
+      <div class="flex flex-col justify-center items-center">
+        <img src="../media/Group 1.png" class="h-20 w-20" alt="" />
+        <img src="../media//Group 5.png" class="mb-20" alt="" />
+      </div>
+    </div>
+    <script>
+      function setupToggle(toggle, button) {
+        toggle.addEventListener("change", function () {
+          if (toggle.checked) {
+            button.classList.add("translate-x-full");
+          } else {
+            button.classList.remove("translate-x-full");
+          }
+        });
+      }
+
+      const toggle1 = document.getElementById("toggle1");
+      const button1 = document.getElementById("button1");
+      setupToggle(toggle1, button1);
+
+      const toggle2 = document.getElementById("toggle2");
+      const button2 = document.getElementById("button2");
+      setupToggle(toggle2, button2);
+    </script>
+  </body>
+</html>

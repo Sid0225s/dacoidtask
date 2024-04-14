@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>taskbysid</title>
+  </head>
+
+  <body class="bg-white p-4 h-[100vh]">
+    <div class="max-w-md mx-auto mt-8 px-4">
+      <h2 class="text-3xl font-semibold mb-8 mt-5">Create an account</h2>
+      <form id="signupForm">
+        <input
+          type="text"
+          placeholder="First Name"
+          class="w-full placeholder-border mb-4 bg-gray-100 p-4 rounded-lg"
+          id="firstName"
+          required
+          oninput="checkForm()"
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          class="w-full placeholder-border mb-4 bg-gray-100 p-4 rounded-lg"
+          id="lastName"
+          required
+          oninput="checkForm()"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full placeholder-border mb-4 bg-gray-100 p-4 rounded-lg"
+          id="email"
+          required
+          oninput="checkForm()"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full placeholder-border mb-4 bg-gray-100 p-4 rounded-lg"
+          id="password"
+          required
+          oninput="checkForm()"
+        />
+        <label class="flex items-center mb-4">
+          <input
+            type="checkbox"
+            oninput="checkForm()"
+            class="form-checkbox text-blue-500"
+            id="agreement"
+            required
+          />
+          <span class="ml-2 text-gray-400 text-sm"
+            >By proceeding, I agree to all
+            <a href="#" class="text-blue-500 underline">T&C</a> and
+            <a href="#" class="text-blue-500 underline">Privacy Policy</a></span
+          >
+        </label>
+      </form>
+      <div id="notification" class="text-red-500 mb-4 text-center hidden">
+        Please fill in all fields and agree to the terms.
+      </div>
+      <div>
+        <div class="flex flex-col mt-20 items-center">
+          <button
+            id="createAccountBtn"
+            type="submit"
+            onclick="createAccount()"
+            class="bg-[#75a0e6] text-xl text-white py-4 px-4 rounded-lg hover:bg-blue-600 mb-8 w-[80vw]"
+            disabled
+          >
+            Create an account
+          </button>
+          <div class="mb-4 w-[80vw]">
+            <div class="flex items-center justify-between mb-6">
+              <div class="border-t border-gray-600 flex-grow"></div>
+              <div class="mx-4 text-gray-700 text-xl">Or</div>
+              <div class="border-t border-gray-600 flex-grow"></div>
+            </div>
+
+            <div class="flex space-x-2 justify-center">
+              <button
+                type="button"
+                class="bg-white border flex justify-center py-4 px-4 rounded w-14"
+              >
+                <img src="../media/flat-color-icons_google.png" alt="g" />
+              </button>
+              <button
+                type="button"
+                class="bg-white flex justify-center border py-4 px-4 rounded w-14"
+              >
+                <img src="../media/Vector.png" alt="f" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 text-lg text-center">
+        Already have an account?
+        <a href="./login.html" class="text-blue-500 underline">Login</a>
+      </p>
+    </div>
+    <script>
+      function checkForm() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const agreement = document.getElementById("agreement").checked;
+
+        const createAccountBtn = document.getElementById("createAccountBtn");
+        const notification = document.getElementById("notification");
+        if (firstName && lastName && email && password && agreement) {
+          createAccountBtn.disabled = false;
+          notification.classList.add("hidden");
+        } else {
+          createAccountBtn.disabled = true;
+          notification.classList.remove("hidden");
+        }
+      }
+
+      function createAccount() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const agreement = document.getElementById("agreement").checked;
+
+        if (firstName && lastName && email && password && agreement) {
+          window.location.href = "./goal.html";
+        }
+      }
+
+      // Call checkForm() when the page loads to set initial button state
+      checkForm();
+    </script>
+  </body>
+</html>

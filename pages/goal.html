@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>taskbysid</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .checkbox {
+        transition: background-color 0.3s;
+      }
+
+      .bg-blue-600 {
+        background-color: #75a0e6;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white p-4 h-[100vh]">
+    <div class="max-w-md mx-auto mt-8 px-4">
+      <h2 class="text-3xl font-semibold mb-8 text-center mt-5">
+        What are your goals?
+      </h2>
+      <div>
+        <div
+          class="flex items-center justify-between bg-gray-200 p-4 rounded-lg mb-4"
+        >
+          <span class="flex-grow">Weight Loss</span>
+          <input
+            type="checkbox"
+            id="goal1"
+            name="goal1"
+            class="hidden"
+            onchange="toggleCheckboxColor('goal1')"
+          />
+          <label
+            for="goal1"
+            class="w-6 h-6 bg-gray-300 rounded cursor-pointer checkbox"
+          ></label>
+        </div>
+
+        <div
+          class="flex items-center justify-between bg-gray-200 p-4 rounded-lg mb-4"
+        >
+          <span class="flex-grow">Muscle Gain</span>
+          <input
+            type="checkbox"
+            id="goal2"
+            name="goal2"
+            class="hidden"
+            onchange="toggleCheckboxColor('goal2')"
+          />
+          <label
+            for="goal2"
+            class="w-6 h-6 bg-gray-300 rounded cursor-pointer checkbox"
+          ></label>
+        </div>
+
+        <div
+          class="flex items-center justify-between bg-gray-200 p-4 rounded-lg mb-4"
+        >
+          <span class="flex-grow">Flexibility and Mobility</span>
+          <input
+            type="checkbox"
+            id="goal3"
+            name="goal3"
+            class="hidden"
+            onchange="toggleCheckboxColor('goal3')"
+          />
+          <label
+            for="goal3"
+            class="w-6 h-6 bg-gray-300 rounded cursor-pointer checkbox"
+          ></label>
+        </div>
+
+        <div
+          class="flex items-center justify-between bg-gray-200 p-4 rounded-lg mb-4"
+        >
+          <span class="flex-grow">General Fitness</span>
+          <input
+            type="checkbox"
+            id="goal4"
+            name="goal4"
+            class="hidden"
+            onchange="toggleCheckboxColor('goal4')"
+          />
+          <label
+            for="goal4"
+            class="w-6 h-6 bg-gray-300 rounded cursor-pointer checkbox"
+          ></label>
+        </div>
+
+        <div
+          class="flex items-center justify-between bg-gray-200 p-4 rounded-lg mb-4"
+        >
+          <span class="flex-grow">Event - specific training</span>
+          <input
+            type="checkbox"
+            id="goal5"
+            name="goal5"
+            class="hidden"
+            onchange="toggleCheckboxColor('goal5')"
+          />
+          <label
+            for="goal5"
+            class="w-6 h-6 bg-gray-300 rounded cursor-pointer checkbox"
+          ></label>
+        </div>
+
+        <div
+          class="flex items-center justify-between bg-gray-200 p-4 rounded-lg mb-4"
+        >
+          <span class="flex-grow">Mindfulness and Mental Health</span>
+          <input
+            type="checkbox"
+            id="goal6"
+            name="goal6"
+            class="hidden"
+            onchange="toggleCheckboxColor('goal6')"
+          />
+          <label
+            for="goal6"
+            class="w-6 h-6 bg-gray-300 rounded cursor-pointer checkbox"
+          ></label>
+        </div>
+      </div>
+      <div>
+        <div class="flex flex-col mt-20 items-center">
+          <button
+            type="submit"
+            onclick="window.location.href = './Workout.html';"
+            class="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 px-4 text-xl rounded-lg hover:bg-blue-600 mb-8 w-full"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleCheckboxColor(checkboxId) {
+        const checkbox = document.getElementById(checkboxId);
+        const label = document.querySelector(`[for="${checkboxId}"]`);
+        label.classList.toggle("bg-blue-600", checkbox.checked);
+      }
+    </script>
+  </body>
+</html>
